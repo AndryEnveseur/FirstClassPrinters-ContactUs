@@ -19,80 +19,139 @@ main {
     width: 100%;
 }
 
-.we-re-here-for-you {
+
+.need-more-advice {
     width: 100%;
+    height: 300px;
+    margin-top: 0px;
+    background-image: url(../../img/background-big-2.jpg);
 
-    height: 600px;
-    box-sizing: border-box;
-
-    background-image: url('../../img/background-big-2.jpg');
-    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
-    font-size: 2rem;
+    /* text-align: center; */
+    font-family: var(--text-family);
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 10px var(--general-lateral-padding-page);
     color: white;
 }
 
-.we-re-here-for-you h1 {
-    text-shadow: 1px 0 #000000, -1px 0 #000000, 0 1px #000000, 0 -1px #000000,
-    1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
-}
-
-.ways-to-contact-us {
-    /* border: 1px solid black; */
-    box-sizing: border-box;
+.need-more-advice section {
     width: 100%;
-    margin-top: 40px;
+    max-width: var(--general-max-width);
+    /* border: 1px solid black; */
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    font-family: sans-serif;
-    color: var(--text-color);
-    fill: var(--text-color);
-}
-
-.ways-to-contact-us > div {
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
+}
+
+.need-more-advice h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.64);
+
+    font-size: 2.7em;
+    letter-spacing: 5px;
+    text-align: right;
+    width: 100%;
+}
+
+.need-more-advice h2 span:first-of-type {
+    margin-right: 15px;
+}
+
+.need-more-advice section > div {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.need-more-advice section > div span {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.ways-to-contact-us > div svg {
-    width: 30px;
+.need-more-advice section > div svg {
+    width: 40px;
+    margin: 10px 15px 10px 0;
+    fill: #725A42;
 }
 
-.ways-to-contact-us ul {
-    list-style: none;
+.need-more-advice section > div svg:last-of-type {
+    margin: 10px 15px 10px 40px;
+}
+
+.need-more-advice p {
+    line-height: 1.5;
+    font-size: 1.35em;
+    font-weight: 400;
+    /* padding: 10px 0; */
     text-align: center;
+    box-sizing: border-box;
+    color: #725A42 ;
+}
+
+.need-more-advice p span {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.ways-to-contact-us {
+    margin-top: 40px;
+
+    width: inherit;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-gap: 30px;
+
+    padding: 0 var(--general-lateral-padding-page);
+    box-sizing: border-box;
+    font-family: var(--text-family);
+}
+
+.ways-to-contact-us .contact-item {
+    min-width: 300px;
+    min-height: 300px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.ways-to-contact-us .contact-item ul {
+    list-style: none;
+    margin: 40px 0 0 0;
     padding: 0;
-    margin: 10px 0 0 0;
 }
 
-.ways-to-contact-us a {
-    text-decoration: none;
+.ways-to-contact-us .contact-item li {
+    margin: 10px 0;
     color: var(--text-color);
-    padding: 15px 40px;
-    border: 1px solid black;
-    box-sizing: border-box;
 }
 
-.ways-to-contact-us > div {
-    width: 100%;
-    box-sizing: border-box;
-    height: 100px;
-    margin: auto;
+.ways-to-contact-us .contact-item h3 {
+    color: var(--title-color);
+}
 
-    /* border: 1px solid black; */
+.ways-to-contact-us .contact-item svg {
+    width: 50px;
+    fill: var(--title-color);
 }
 
 #google-maps {
@@ -110,10 +169,76 @@ that contains the map */
     height: 400px;
     width: 400px;
 }
-    
-h2 {
-    color: #308d46;
+
+@media (max-width: 1350px) {
+    .need-more-advice section > div svg {
+        fill: white;
+    }
+
+    .need-more-advice h2 {
+        text-align: center;
+    }
+
+    .need-more-advice section > div {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .need-more-advice section > div p {
+        color: white;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+                    -5px -5px 10px rgba(0, 0, 0, 0.3);
+    }
 }
+
+@media (max-width: 900px) {
+    .need-more-advice,
+    .more-features-container {
+        background-attachment: scroll;
+    }
+
+    .need-more-advice h2 {
+        font-size: 1.4em;
+    }
+
+    .need-more-advice h2 span:first-of-type {
+        margin-right: 0;
+    }
+
+    .need-more-advice h2 {
+        font-size: 2em;
+    }
+
+    .need-more-advice p {
+        font-size: 1em;
+    }
+
+    .need-more-advice p span {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 400px) {
+    .need-more-advice h2 {
+        font-size: 1.6em;
+    }
+
+    .need-more-advice p {
+        font-size: .9em;
+    }
+
+    .need-more-advice p span {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    .need-more-advice h2 {
+        font-size: 1.3em;
+    }
+}
+
 
 @media (max-width: 1350px) {
 

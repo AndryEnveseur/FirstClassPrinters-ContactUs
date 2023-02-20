@@ -95,7 +95,7 @@ footer #made-in-britain {
     margin-top: 20px;
 }
 
-footer .footer-top-container a:hover {
+footer .footer-top-container a:hover, footer .footer-top-container a:active {
     background-size: 0 2px, 100% 2px;
 }
 
@@ -105,6 +105,17 @@ footer .footer-top-container a:hover {
     }
     footer #payment-accept {
         max-width: max-content;
+    }
+}
+
+@media (max-width: 380px) {
+    footer #payment-accept {
+        height: auto;
+        width: 100%;
+    }
+
+    .customer-services li:last-of-type {
+        width: auto;
     }
 }
 
