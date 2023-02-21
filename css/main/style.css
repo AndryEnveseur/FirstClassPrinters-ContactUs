@@ -159,7 +159,7 @@ main {
 }
 
 .ways-to-contact-us .contact-item svg {
-    width: 50px;
+    width: 40px;
     fill: var(--title-color);
     top: 0;
     margin: 0;
@@ -186,19 +186,25 @@ main {
 }
 
 #google-maps {
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    margin-top: 40px;
+    padding: 0 var(--general-lateral-padding-page);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#google-maps > div {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: var(--general-max-width);
 }
 
 #google-maps iframe {
     width: inherit;
-}
-
-/* Set the size of the div element 
-that contains the map */
-#map {
-    height: 400px;
-    width: 400px;
 }
 
 @media (max-width: 1350px) {
@@ -268,26 +274,4 @@ that contains the map */
     .need-more-advice h2 {
         font-size: 1.3em;
     }
-}
-
-
-@media (max-width: 1350px) {
-
-}
-
-@media (min-width: 700px) {
-
-}
-
-@media (max-width: 750px) {
-
-}
-
-@media (max-width: 900px) {
-
-}
-
-
-@media (max-width: 400px) {
-
 }

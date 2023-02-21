@@ -95,7 +95,8 @@ footer #made-in-britain {
     margin-top: 20px;
 }
 
-footer .footer-top-container a:hover, footer .footer-top-container a:active {
+footer .footer-top-container a:hover, 
+footer .footer-top-container a:active {
     background-size: 0 2px, 100% 2px;
 }
 
