@@ -58,16 +58,14 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.64);
-
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .5),
+                 -5px -5px 10px rgba(0, 0, 0, .5);
     font-size: 2.7em;
     letter-spacing: 5px;
     text-align: right;
     width: 100%;
-}
 
-.need-more-advice h2 span:first-of-type {
-    margin-right: 15px;
+    margin-bottom: 0;
 }
 
 .need-more-advice section > div {
@@ -78,60 +76,70 @@ main {
     width: 50%;
 }
 
-.need-more-advice section > div span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.need-more-advice section > div svg {
-    width: 40px;
-    margin: 10px 15px 10px 0;
-    fill: #725A42;
-}
-
-.need-more-advice section > div svg:last-of-type {
-    margin: 10px 15px 10px 40px;
-}
-
-.need-more-advice p {
-    line-height: 1.5;
-    font-size: 1.35em;
-    font-weight: 400;
-    /* padding: 10px 0; */
+.need-more-advice h3 {
     text-align: center;
-    box-sizing: border-box;
-    color: #725A42 ;
-}
-
-.need-more-advice p span {
-    font-weight: bold;
-    font-size: 1.5em;
+    width: 100%;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, .5),
+                 -5px -5px 10px rgba(0, 0, 0, .5);
+    font-weight: lighter;
 }
 
 .ways-to-contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 var(--general-lateral-padding-page);
+}
 
+.ways-to-contact-us > div {
+    max-width: var(--general-max-width);
     width: inherit;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-gap: 30px;
 
-    padding: 0 var(--general-lateral-padding-page);
     box-sizing: border-box;
     font-family: var(--text-family);
 }
 
 .ways-to-contact-us .contact-item {
     min-width: 300px;
-    min-height: 300px;
+    /* min-height: 300px; */
+    height: 160px;
 
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-sizing: border-box;
     padding: 30px;
+    overflow: hidden;
+
+    border-bottom: 1px solid transparent;    
+    transition-duration: 400ms;
+    transition-property: border;
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11); */
+}
+
+.ways-to-contact-us .contact-item:hover,
+.ways-to-contact-us .contact-item:active {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.11);
+}
+
+.ways-to-contact-us .contact-item .info {
+    transform: translateY(80px);
+}
+
+.ways-to-contact-us .contact-item .info ul {
+    opacity: 0;
+    transition-duration: 400ms;
+}
+
+.ways-to-contact-us .contact-item:hover .info ul,
+.ways-to-contact-us .contact-item:active .info ul {
+    opacity: 1;
 }
 
 .ways-to-contact-us .contact-item ul {
@@ -143,15 +151,39 @@ main {
 .ways-to-contact-us .contact-item li {
     margin: 10px 0;
     color: var(--text-color);
+    font-size: .9em;
 }
 
 .ways-to-contact-us .contact-item h3 {
     color: var(--title-color);
+    margin-top: 0;
 }
 
 .ways-to-contact-us .contact-item svg {
     width: 50px;
     fill: var(--title-color);
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: initial;
+    transition-duration: 400ms;
+}
+
+.ways-to-contact-us .contact-item:hover svg,
+.ways-to-contact-us .contact-item:active svg  {
+    transform: translateY(-70px) rotateY(180deg);
+    opacity: 0;
+}
+
+.ways-to-contact-us .contact-item > div {
+    transition-duration: 400ms;
+}
+
+.ways-to-contact-us .contact-item:hover > div,
+.ways-to-contact-us .contact-item:active > div {
+    transform: translateY(-80px);
 }
 
 #google-maps {
