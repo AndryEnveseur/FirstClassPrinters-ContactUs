@@ -151,6 +151,16 @@ main {
     font-size: .9em;
 }
 
+.ways-to-contact-us .contact-item a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+.ways-to-contact-us .contact-item a:hover,
+.ways-to-contact-us .contact-item a:active {
+    text-decoration:underline;
+}
+
 .ways-to-contact-us .contact-item h3 {
     color: var(--title-color);
     margin-top: 0;
