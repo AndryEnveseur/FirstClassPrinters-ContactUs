@@ -14,6 +14,10 @@ body {
     background-color: var(--background-website);
 }
 
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
 @media (max-width: 450px) {
     body {
         --general-lateral-padding-page: 20px;

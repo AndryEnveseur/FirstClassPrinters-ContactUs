@@ -230,6 +230,11 @@ main {
 }
 
 @media (max-width: 900px) {
+
+    main {
+        padding-top: 100px;
+    }
+
     .need-more-advice,
     .more-features-container {
         background-attachment: scroll;
