@@ -100,6 +100,10 @@ footer .footer-top-container a:active {
     background-size: 0 2px, 100% 2px;
 }
 
+#copyright {
+    font-size: .8em;
+}
+
 @media (max-width: 400px) {
     .customer-services li:last-of-type {
         width: 200px;
