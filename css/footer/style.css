@@ -39,12 +39,10 @@ footer .footer-top-container > div {
     box-sizing: border-box;
     max-width: var(--general-max-width);
     grid-gap: 50px;
-
 }
 
-footer .footer-top-container li h3 {
-    margin: 0;
-    padding: 0;
+footer .footer-top-container h1 {
+    font-size: 1.3em;
 }
 
 footer .about-us p {
@@ -53,7 +51,7 @@ footer .about-us p {
 }
 
 footer .footer-top-container li {
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
 footer .footer-top-container a {
@@ -106,6 +104,7 @@ footer .footer-top-container a:hover, footer .footer-top-container a:active {
 @media (max-width: 900px) {
     footer .footer-top-container > div {
         flex-wrap: wrap;
+    
     }
 }
 
