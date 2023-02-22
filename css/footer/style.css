@@ -28,25 +28,28 @@ footer .footer-top-container {
     padding: 50px var(--general-lateral-padding-page);
     width: 100%;
 
-    /* padding: 30px 0; */
     box-sizing: border-box;
 }
 
 footer .footer-top-container > div {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    /* grid-auto-rows: minmax(auto, 100%); */
 
     box-sizing: border-box;
     max-width: var(--general-max-width);
-    grid-gap: 20px;
+    grid-gap: 50px;
 
 }
 
 footer .footer-top-container li h3 {
     margin: 0;
     padding: 0;
+}
+
+footer .about-us p {
+    line-height: 20px;
+    font-size: .9em;
 }
 
 footer .footer-top-container li {
@@ -98,6 +101,13 @@ footer #made-in-britain {
 
 footer .footer-top-container a:hover, footer .footer-top-container a:active {
     background-size: 0 2px, 100% 2px;
+}
+
+@media (max-width: 900px) {
+    footer .footer-top-container > div {
+        flex-wrap: wrap;
+    
+    }
 }
 
 @media (max-width: 400px) {
