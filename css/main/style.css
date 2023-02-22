@@ -141,7 +141,7 @@ main {
 
 .ways-to-contact-us .contact-item ul {
     list-style: none;
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
     padding: 0;
 }
 
@@ -168,8 +168,8 @@ main {
     font-size: 1.3em;
 }
 
-.ways-to-contact-us .contact-item svg {
-    width: 40px;
+.ways-to-contact-us .contact-item img {
+    /* width: 40px; */
     fill: var(--title-color);
     top: 0;
     margin: 0;
@@ -180,8 +180,8 @@ main {
     transition-duration: 400ms;
 }
 
-.ways-to-contact-us .contact-item:hover svg,
-.ways-to-contact-us .contact-item:active svg  {
+.ways-to-contact-us .contact-item:hover img,
+.ways-to-contact-us .contact-item:active img  {
     transform: translateY(-70px) rotateY(180deg);
     opacity: 0;
 }

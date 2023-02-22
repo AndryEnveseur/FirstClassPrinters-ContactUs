@@ -54,7 +54,7 @@ footer .footer-top-container li {
 }
 
 footer .footer-top-container a {
-    color: white;
+    color: rgb(230, 228, 228);
     text-decoration: none;
     margin: 0;
     padding: 0 0 5px 0;
@@ -75,6 +75,7 @@ footer .footer-top-container a {
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
+    font-size: .9em;
 }
 
 footer .footer-top-container p {
@@ -95,13 +96,8 @@ footer #made-in-britain {
     margin-top: 20px;
 }
 
-footer .footer-top-container a:hover, 
-footer .footer-top-container a:active {
+footer .footer-top-container a:hover, footer .footer-top-container a:active {
     background-size: 0 2px, 100% 2px;
-}
-
-#copyright {
-    font-size: .8em;
 }
 
 @media (max-width: 400px) {
