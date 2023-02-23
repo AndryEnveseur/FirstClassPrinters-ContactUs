@@ -243,10 +243,14 @@ main {
     max-width: var(--general-max-width);
 }
 
-.google-maps > div:last-of-type a:hover,
-.google-maps > div:last-of-type a:active {
+.google-maps > div:last-of-type a {
     transition-property: background;
     transition-duration: 400ms;
+}
+
+.google-maps > div:last-of-type a:hover,
+.google-maps > div:last-of-type a:active {
+
     background: rgba(255, 255, 255, 0.4);
 }
 
