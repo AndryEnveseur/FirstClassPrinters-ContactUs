@@ -246,6 +246,7 @@ main {
 .google-maps > div:last-of-type a {
     transition-property: background;
     transition-duration: 400ms;
+
 }
 
 .google-maps > div:last-of-type a:hover,
