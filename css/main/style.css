@@ -243,12 +243,10 @@ main {
     max-width: var(--general-max-width);
 }
 
-.google-maps > div:last-of-type a:hover {
+.google-maps > div:last-of-type a:hover,
+.google-maps > div:last-of-type a:active {
     transition-property: background;
     transition-duration: 400ms;
-}
-
-.google-maps > div:last-of-type a:hover {
     background: rgba(255, 255, 255, 0.4);
 }
 
@@ -260,10 +258,12 @@ main {
     opacity: 0;
 }
 
-.google-maps > div:last-of-type a:hover svg {
+.google-maps > div:last-of-type a:hover svg,
+.google-maps > div:last-of-type a:active svg {
     transform: scale3d(1, 1, 1);
     opacity: 1;
 }
+
 
 .google-maps svg {
     transform: scale3d(.6, .6, .6);
