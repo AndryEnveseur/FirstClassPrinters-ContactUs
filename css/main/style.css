@@ -195,7 +195,7 @@ main {
     transform: translateY(-80px);
 }
 
-#google-maps {
+.google-maps {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,23 +203,72 @@ main {
     margin-top: 40px;
     padding: 0 var(--general-lateral-padding-page);
     box-sizing: border-box;
-    border-radius: 10px;
 }
 
-#google-maps > div {
+.google-maps > div:first-of-type {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    width: 100%;
-    border-radius: 10px;
+    max-width: var(--general-max-width);
     overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.google-maps img {
+    display: block;
+}
+
+.google-maps > div:last-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    width: 100%;
+    height: 503px;
+
+    padding: 0 var(--general-lateral-padding-page);
+    box-sizing: border-box;
+}
+
+.google-maps a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+
+    border-radius: 10px;
     max-width: var(--general-max-width);
 }
 
-#google-maps iframe {
-    width: inherit;
+.google-maps > div:last-of-type a:hover {
+    transition-property: background;
+    transition-duration: 400ms;
 }
+
+.google-maps > div:last-of-type a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.google-maps > div:last-of-type a svg {
+    transition-property: transform, opacity;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+
+    opacity: 0;
+}
+
+.google-maps > div:last-of-type a:hover svg {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+}
+
+.google-maps svg {
+    transform: scale3d(.6, .6, .6);
+}
+
 
 @media (max-width: 1350px) {
     .need-more-advice section > div svg {
