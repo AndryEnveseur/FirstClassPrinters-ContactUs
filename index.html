@@ -24,6 +24,8 @@
             --general-lateral-padding-page: 50px;
 
             background-color: var(--background-website);
+
+            --header-height: 90px;
         }
 
         a {
@@ -57,6 +59,7 @@
             justify-content: center;
             align-items: center;
             padding: 10px var(--general-lateral-padding-page);
+
         }
 
         header nav {
@@ -225,7 +228,7 @@
 
             box-sizing: border-box;
 
-            padding-top: 135px;
+            padding-top: calc(var(--header-height) + 25px);
 
             display: flex;
             justify-content: center;
@@ -528,11 +531,6 @@
         }
 
         @media (max-width: 900px) {
-
-            main {
-                padding-top: 100px;
-            }
-
             .need-more-advice,
             .more-features-container {
                 background-attachment: scroll;
